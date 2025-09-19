@@ -1,0 +1,193 @@
+.chatroomList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.chatroomList.dark {
+  background: #2a2a2a;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  height: 200px;
+}
+
+.dark .emptyState {
+  color: #ccc;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #4285f4;
+}
+
+.emptyState p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState span {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.dark .emptyState span {
+  color: #666;
+}
+
+.chatroomItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.chatroomItem:hover {
+  background: #f8f9fa;
+}
+
+.dark .chatroomItem:hover {
+  background: #333;
+}
+
+.chatroomIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #4285f4;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.chatroomInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.chatroomTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #1a1a1a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dark .chatroomTitle {
+  color: white;
+}
+
+.chatroomPreview {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dark .chatroomPreview {
+  color: #ccc;
+}
+
+.chatroomMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.dark .chatroomMeta {
+  color: #666;
+}
+
+.messageCount {
+  font-weight: 500;
+}
+
+.timestamp {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.chatroomItem:hover .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  background: #f8f9fa;
+  color: #dc3545;
+}
+
+.dark .deleteButton:hover {
+  background: #333;
+  color: #dc3545;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .chatroomItem {
+    padding: 0.75rem;
+  }
+  
+  .chatroomIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .chatroomTitle {
+    font-size: 0.9rem;
+  }
+  
+  .chatroomPreview {
+    font-size: 0.8rem;
+  }
+  
+  .chatroomMeta {
+    font-size: 0.7rem;
+    gap: 0.5rem;
+  }
+  
+  .deleteButton {
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,195 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: none;
+  border: none;
+  color: #4285f4;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.backButton:hover {
+  background: #f8f9fa;
+}
+
+.backButton:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.phoneNumber {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.otpContainer {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.otpInput {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.otpInput:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+}
+
+.otpInput.error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.otpInput:disabled {
+  background: #f8f9fa;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0;
+}
+
+.verifyButton {
+  padding: 0.75rem 1.5rem;
+  background: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.verifyButton:hover:not(:disabled) {
+  background: #3367d6;
+}
+
+.verifyButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.footer p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.resendButton {
+  background: none;
+  border: none;
+  color: #4285f4;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.resendButton:hover:not(:disabled) {
+  color: #3367d6;
+}
+
+.resendButton:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: #1a1a1a;
+    color: white;
+  }
+  
+  .header h1 {
+    color: white;
+  }
+  
+  .header p {
+    color: #ccc;
+  }
+  
+  .phoneNumber {
+    color: white;
+  }
+  
+  .otpInput {
+    background: #1a1a1a;
+    border-color: #333;
+    color: white;
+  }
+  
+  .otpInput:focus {
+    border-color: #4285f4;
+  }
+  
+  .otpInput:disabled {
+    background: #2a2a2a;
+    color: #666;
+  }
+  
+  .backButton:hover {
+    background: #2a2a2a;
+  }
+}

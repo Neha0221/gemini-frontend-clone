@@ -1,0 +1,481 @@
+.chatInterface {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f8f9fa;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.chatInterface.dark {
+  background: #1a1a1a;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-bottom: 1px solid #e1e5e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dark .header {
+  background: #2a2a2a;
+  border-bottom-color: #333;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #f8f9fa;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 1rem;
+}
+
+.backButton:hover {
+  background: #e9ecef;
+  color: #4285f4;
+}
+
+.dark .backButton {
+  background: #333;
+  color: #ccc;
+}
+
+.dark .backButton:hover {
+  background: #444;
+  color: #4285f4;
+}
+
+.chatroomInfo {
+  flex: 1;
+}
+
+.chatroomTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #1a1a1a;
+}
+
+.dark .chatroomTitle {
+  color: white;
+}
+
+.messageCount {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+.dark .messageCount {
+  color: #ccc;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #f8f9fa;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background: #e9ecef;
+  color: #4285f4;
+}
+
+.dark .actionButton {
+  background: #333;
+  color: #ccc;
+}
+
+.dark .actionButton:hover {
+  background: #444;
+  color: #4285f4;
+}
+
+.messagesContainer {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.messagesList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dateGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dateDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.dateText {
+  background: #e9ecef;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.dark .dateText {
+  background: #333;
+  color: #ccc;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.userMessage {
+  justify-content: flex-end;
+}
+
+.aiMessage {
+  justify-content: flex-start;
+}
+
+.messageContent {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.userMessage .messageContent {
+  background: #4285f4;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.aiMessage .messageContent {
+  background: white;
+  color: #1a1a1a;
+  border: 1px solid #e1e5e9;
+  border-bottom-left-radius: 4px;
+}
+
+.dark .aiMessage .messageContent {
+  background: #2a2a2a;
+  color: white;
+  border-color: #333;
+}
+
+.messageText {
+  margin: 0;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.imageMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.messageImage {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.imageCaption {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+.userMessage .imageCaption {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark .aiMessage .imageCaption {
+  color: #ccc;
+}
+
+.messageActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.message:hover .messageActions {
+  opacity: 1;
+}
+
+.messageTime {
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.userMessage .messageTime {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .aiMessage .messageTime {
+  color: #666;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copyButton:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #666;
+}
+
+.userMessage .copyButton {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.userMessage .copyButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.dark .aiMessage .copyButton {
+  color: #666;
+}
+
+.dark .aiMessage .copyButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ccc;
+}
+
+.inputContainer {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #e1e5e9;
+}
+
+.dark .inputContainer {
+  background: #2a2a2a;
+  border-top-color: #333;
+}
+
+.imageUploadArea {
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border: 2px dashed #e1e5e9;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dark .imageUploadArea {
+  background: #333;
+  border-color: #555;
+}
+
+.uploadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.uploadButton:hover {
+  background: #3367d6;
+}
+
+.imagePreviewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.imagePreview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.previewImage {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #e1e5e9;
+}
+
+.dark .previewImage {
+  border-color: #555;
+}
+
+.imageInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.fileName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  word-break: break-all;
+}
+
+.dark .fileName {
+  color: white;
+}
+
+.fileSize {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.dark .fileSize {
+  color: #ccc;
+}
+
+.imageActions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.sendButton {
+  padding: 0.5rem 1rem;
+  background: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.sendButton:hover {
+  background: #3367d6;
+}
+
+.cancelButton {
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  color: #666;
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.cancelButton:hover {
+  background: #e9ecef;
+  color: #333;
+}
+
+.dark .cancelButton {
+  background: #333;
+  color: #ccc;
+  border-color: #555;
+}
+
+.dark .cancelButton:hover {
+  background: #444;
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem;
+  }
+  
+  .chatroomTitle {
+    font-size: 1rem;
+  }
+  
+  .messageContent {
+    max-width: 85%;
+  }
+  
+  .messageImage {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+  .previewImage {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+  .inputContainer {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .messageContent {
+    max-width: 90%;
+  }
+  
+  .messageImage {
+    max-width: 120px;
+    max-height: 120px;
+  }
+  
+  .previewImage {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
