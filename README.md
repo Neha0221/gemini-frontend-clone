@@ -4,7 +4,7 @@ A modern, responsive chat application built with React that provides a seamless 
 
 ## 🚀 Live Demo
 
-[Deploy your own instance](#deployment) or visit the live demo at: https://gemini-frontend-clone.onrender.com
+Live demo at: https://gemini-frontend-clone.onrender.com
 
 ## 📋 Project Overview
 
