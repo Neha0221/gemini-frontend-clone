@@ -4,7 +4,7 @@ A modern, responsive chat application built with React that provides a seamless 
 
 ## 🚀 Live Demo
 
-[Deploy your own instance](#deployment) or visit the live demo at: [Your Live URL Here]
+[Deploy your own instance](#deployment) or visit the live demo at: https://gemini-frontend-clone.onrender.com
 
 ## 📋 Project Overview
 
@@ -289,7 +289,7 @@ npm run build
    ```bash
    git add .
    git commit -m "Initial commit"
-   git push origin main
+   git push origin master
    ```
 
 2. **Connect to Render**
@@ -302,13 +302,18 @@ npm run build
    - **Runtime**: `Node`
    - **Build Command**: `npm install && npm run build`
    - **Start Command**: `npm start`
-   - **Root Directory**: `gemini-chat-app` (if your project is in a subfolder)
+   - **Root Directory**: ``
    - **Environment**: `Static Site`
 
 
 ## 📱 Screenshots
 
-*Add screenshots of your application here*
+<img width="1914" height="959" alt="image" src="https://github.com/user-attachments/assets/eaae9e76-9bda-430a-a860-f19e39b747aa" />
+<img width="1918" height="965" alt="image" src="https://github.com/user-attachments/assets/42cda6cc-0199-42b3-9e5b-4fb08aab07fd" />
+<img width="1909" height="971" alt="image" src="https://github.com/user-attachments/assets/72fcab8c-2a84-4497-8c9c-e888a9de2d98" />
+
+
+
 
 ## 🙏 Acknowledgments
 
